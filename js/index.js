@@ -7,7 +7,7 @@ const isLowerCase = function (str) {
 }
 
 const isOnlyLetters = function (str) {
-    let pattern = /[^a-zA-Z]/g
+    let pattern = /[^a-zA-Z ]/g
     return !pattern.test(str);
 }
 
@@ -56,6 +56,9 @@ const crypt = async function (e) {
 const decrypt = async function (e) {
     let user_input = document.getElementById("mainContainer__userInput");
     let result = user_input.value;
+    console.log("EMPTY STRING: " + user_input.value != "" )
+    console.log("LOWER CASE: " + isLowerCase(user_input.value));
+    console.log("ONLY LETTERS: " + isOnlyLetters(user_input.value));
     if (isLowerCase(user_input.value) && user_input.value != "" && isOnlyLetters(user_input.value)) {
         result = result.replace(/enter/g, "e");
         result = result.replace(/imes/g, "i");
