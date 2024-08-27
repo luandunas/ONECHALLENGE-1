@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
+    --light-blue-500: #757FB2;
+    --gray-100: #CED4DA;
+    --gray-200: #ADB5BD;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--light-blue-100);
+}
+
+#logo {
+    display: flex;
+    padding: 40px 0px 0px 40px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    text-align: start;
+}
+
+#mainContainer {
+    display: flex;
+    width: 40%;
+    height: 80vh;
+    flex-direction: column;
+}
+
+#mainContainer__userInput {
+    height: 80%;
+    resize: none;
+    border: none;
+    background-color: var(--light-blue-100);
+    font-size: 32px;
+    padding: 30px;
+    line-height: 1.5;
+    color: var(--dark-blue-300);
+}
+
+#mainContainer__userInput::placeholder {
+    font-size: 32px;
+    color: var(--dark-blue-300);
+    opacity: 1;
+}
+
+#mainContainer__rules {
+    display: flex;
+    height: 5%;
+    font-size: 12px;
+    align-items: center;
+}
+
+#mainContainer__rules>img {
+    height: 16px;
+    margin-right: 8px;
+}
+
+.mainContainer__buttons {
+    display: flex;
+    height: 10%;
+    margin-bottom: 5%;
+}
+
+/* .mainContainer__buttons>input {
+    width: 50%;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+} */
+
+.btn {
+    width: 50%;
+    border-radius: 24px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#mainContainer__buttons__button_cript {
+    background-color: var(--dark-blue-300);
+    color: white;
+    margin-right: 24px;
+}
+
+#mainContainer__buttons__button_decript {
+    background-color: var(--light-blue-100);
+    color: var(--dark-blue-300);
+    border: var(--dark-blue-300) thin solid;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    height: 80vh;
+    background-color: white;
+    margin-left: 80px;
+    border-radius: 32px;
+}
+
+#asideImg {
+    /* width: 80%; */
+    margin: 0 32px;
+}
+
+#resultContainer__texts {
+    display: flex;
+    flex-direction: column;
+}
+
+#resultContainer__texts>* {
+    text-align: center;
+}
+
+#resultContainer__texts>h1 {
+    font-size: 24px;
+    margin: 32px 32px 16px 32px;
+}
+
+#resultContainer__texts>p {
+    font-size: 16px;
+    color: var(--gray-400);
+}
+
+#resultContainer__result {
+    display: none;
+    height: 100%;
+    flex-direction: column;
+    padding: 32px 32px 0px 32px;
+}
+
+#result {
+    height: 80%;
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--gray-400);
+    word-wrap: break-word;
+}
+
+#resultContainer__button__copy {
+    background-color: white;
+    border: var(--dark-blue-300) thin solid;
+    color: var(--dark-blue-300);
+    height: 10%;
+    width: 100%;
+    margin-top: 10%;
+}

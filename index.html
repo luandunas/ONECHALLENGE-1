@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORACLE ONE CHALLENGE</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" id="logo"><img src="img/logo.svg" alt="Logo Alura"></a>
+    </header>
+
+    <main>
+        <section id="mainContainer">
+            <textarea type="text" name="" id="mainContainer__userInput" placeholder="Digite seu texto"></textarea>
+            <div id="mainContainer__rules">
+                <img src="img/information_icon.svg" alt="Icone de informação">
+                <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="mainContainer__buttons">
+                <input class="btn" type="button" value="Criptografar" id="mainContainer__buttons__button_cript"
+                    onclick="crypt(event)">
+                <input class="btn" type="button" value="Descriptografar" id="mainContainer__buttons__button_decript" onclick="decrypt(event)">
+            </div>
+        </section>
+
+        <aside id="resultContainer">
+            <img src="img/aside_img.svg" alt="Desenho de uma garota com uma lupa" id="asideImg">
+            <div id="resultContainer__texts">
+                <h1>Nenhuma mensagem encontrada</h1>
+                <p>Digite um texto que você deseja <br> criptografar ou descriptografar.</p>
+            </div>
+
+            <div id="resultContainer__result">
+                <p id="result"></p>
+                <input class="btn" type="button" value="Copiar" id="resultContainer__button__copy">
+            </div>
+
+        </aside>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
