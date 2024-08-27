@@ -56,9 +56,6 @@ const crypt = async function (e) {
 const decrypt = async function (e) {
     let user_input = document.getElementById("mainContainer__userInput");
     let result = user_input.value;
-    console.log("EMPTY STRING: " + user_input.value != "" )
-    console.log("LOWER CASE: " + isLowerCase(user_input.value));
-    console.log("ONLY LETTERS: " + isOnlyLetters(user_input.value));
     if (isLowerCase(user_input.value) && user_input.value != "" && isOnlyLetters(user_input.value)) {
         result = result.replace(/enter/g, "e");
         result = result.replace(/imes/g, "i");
@@ -70,4 +67,9 @@ const decrypt = async function (e) {
         user_input.focus();
         hideResult();
     }
+}
+
+let copyElement = function(div){
+    navigator.clipboard.writeText(div.textContent);
+    alert("Copiado!");
 }
