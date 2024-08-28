@@ -1,3 +1,5 @@
+const tokens = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+
 const isLowerCase = function (str) {
     if (str === str.toLowerCase()) {
         return true;
@@ -7,7 +9,7 @@ const isLowerCase = function (str) {
 }
 
 const isOnlyLetters = function (str) {
-    let pattern = /[^a-zA-Z ]/g
+    let pattern = /[^_\W]+/g
     return !pattern.test(str);
 }
 
@@ -41,11 +43,7 @@ const crypt = async function (e) {
     let user_input = document.getElementById("mainContainer__userInput");
     let result = user_input.value;
     if (isLowerCase(user_input.value) && user_input.value != "" && isOnlyLetters(user_input.value)) {
-        result = result.replace(/e/g, "enter");
-        result = result.replace(/i/g, "imes");
-        result = result.replace(/a/g, "ai");
-        result = result.replace(/o/g, "ober");
-        result = result.replace(/u/g, "ufat");
+        tokens.forEach(token => result.replaceAll(token[0], token[1]));
         showResult(result);
     } else {
         user_input.focus();
@@ -57,11 +55,7 @@ const decrypt = async function (e) {
     let user_input = document.getElementById("mainContainer__userInput");
     let result = user_input.value;
     if (isLowerCase(user_input.value) && user_input.value != "" && isOnlyLetters(user_input.value)) {
-        result = result.replace(/enter/g, "e");
-        result = result.replace(/imes/g, "i");
-        result = result.replace(/ai/g, "a");
-        result = result.replace(/ober/g, "o");
-        result = result.replace(/ufat/g, "u");
+        tokens.forEach(token => result.replaceAll(token[1], token[0]));
         showResult(result);
     } else {
         user_input.focus();
