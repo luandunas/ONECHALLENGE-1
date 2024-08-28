@@ -42,8 +42,9 @@ const hideResult = function () {
 const crypt = async function (e) {
     let user_input = document.getElementById("mainContainer__userInput");
     let result = user_input.value;
+    console.log(result)
     if (isLowerCase(user_input.value) && user_input.value != "" && isOnlyLetters(user_input.value)) {
-        tokens.forEach(token => result.replaceAll(token[0], token[1]));
+        await tokens.forEach(token => result = result.replaceAll(token[0], token[1]));
         showResult(result);
     } else {
         user_input.focus();
@@ -55,7 +56,7 @@ const decrypt = async function (e) {
     let user_input = document.getElementById("mainContainer__userInput");
     let result = user_input.value;
     if (isLowerCase(user_input.value) && user_input.value != "" && isOnlyLetters(user_input.value)) {
-        tokens.forEach(token => result.replaceAll(token[1], token[0]));
+        tokens.forEach(token => result = result.replaceAll(token[1], token[0]));
         showResult(result);
     } else {
         user_input.focus();
