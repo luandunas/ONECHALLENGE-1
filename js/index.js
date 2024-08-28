@@ -22,7 +22,7 @@ const showResult = function (result) {
     asideImg.style.display = "none";
     asideTexts.style.display = "none";
 
-    pResult.textContent = result;
+    pResult.value = result;
     containerResult.style.display = "flex";
 }
 
@@ -65,6 +65,6 @@ const decrypt = async function (e) {
 }
 
 let copyElement = function(div){
-    navigator.clipboard.writeText(div.textContent);
+    navigator.clipboard.writeText(div.value);
     alert("Copiado!");
 }

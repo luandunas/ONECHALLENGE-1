@@ -147,6 +147,8 @@ aside {
 
 #result {
     height: 80%;
+    resize: none;
+    border: none;
     font-size: 24px;
     line-height: 1.5;
     color: var(--gray-400);
