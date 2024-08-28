@@ -9,7 +9,7 @@ const isLowerCase = function (str) {
 }
 
 const isOnlyLetters = function (str) {
-    let pattern = /[^_\W]+/g
+    let pattern = /[^a-zA-Z ]/g
     return !pattern.test(str);
 }
 
